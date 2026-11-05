@@ -1,0 +1,13 @@
+[project]
+name = "stat-486-final-project"
+version = "0.1.0"
+description = "STAT 486 Final Project"
+requires-python = "==3.11.5"
+dependencies = [
+    "ipykernel>=6.29,<7",
+    "matplotlib>=3.9,<4",
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<3",
+    "scikit-learn>=1.5,<2",
+    "seaborn>=0.13,<1",
+]
