@@ -1,6 +1,6 @@
 # STAT 486 Project Plan
 
-See ```project-plan-template.md``` for further details. 
+See ```project-plan.md``` for further details. 
 
 ## Project Proposal - October 27, 2026
 
