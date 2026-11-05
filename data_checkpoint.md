@@ -1,17 +1,20 @@
 # Data and Reference Result
 
 **Checkpoint:** November 5, 2026, by 11:59 PM Mountain Time  
-**Team:** Brayden Humpherys, Sujin Leek, Alyssa Wilson
+**Team:** Brayden Humpherys, Alyssa Wilson, Sujin Leek
+**Date:** November 5, 2026
+
+Use any prompts that help you describe your progress. Add a dated entry to the root `README.md` of your team's repository and link the relevant code and output there; this file is optional supporting material.
 
 ## Data
 
-Our data is an anime dataset from Kaggle. 
-We care mainly about the title_english, synopsis, and genres fields, so we selected those. We removed any rows with null values for synopsis and genres. Because the dataset is just a collction of animes, it will not affect our analysis if we exclude points. We plan to fill in the titles that are missing by either looking them up or using AI to create them. This also would not affect our analysis.
+The data was obtained from https://www.kaggle.com/datasets/battos/myanimelist-animes. We cleaned the data by removing duplicates and missing synopses. 
+
+Our data is an anime dataset from Kaggle. We care mainly about the title_english, synopsis, and genres fields, so we selected those. We removed any rows with null values for synopsis and genres. Because the dataset is just a collection of anime, it will not affect our analysis if we exclude points. We plan to fill in the titles that are missing by either looking them up or using AI to create them. This also would not affect our analysis.
 
 ## Evaluation plan
 
-We will use synopsis and the title as predictor variables. We will vecotrize the text. Using SMOTE we will attempt to classify the genres. We will then evaluate the same data using our modified SMOTE model for unbalanced classes and compare performance. 
-To avoid data leakage we will split train and test sets before standardizing or fitting a model. 
+We will use synopsis and the title as predictor variables. We will vectorize the text. Using SMOTE we will attempt to classify the genres. We will then evaluate the same data using our modified SMOTE model for unbalanced classes and compare performance. To avoid data leakage we will split train and test sets before standardizing or fitting a model.
 
 ## First runnable result
 
