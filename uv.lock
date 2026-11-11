@@ -25,7 +25,7 @@ name = "cffi"
 version = "2.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pycparser", marker = "implementation_name != 'PyPy'" },
+    { name = "pycparser" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz", hash = "sha256:dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be", size = 530807, upload-time = "2026-08-03T21:21:18.939Z" }
 wheels = [
@@ -145,6 +145,35 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/46/87/4ba592099172764aa56e66919b0c3ddaf944c775433e806e36e165062095/fonttools-4.68.0-cp311-cp311-win_amd64.whl", hash = "sha256:35425bba603cf9d72c9f3c173ea6c98632164f3bdfb1ce1a3dcc928979c6ec6d", size = 1681821, upload-time = "2026-10-27T16:28:17.757Z" },
     { url = "https://files.pythonhosted.org/packages/e1/54/004f12709b21a56bb944fdca6d165b0d90cf9366143675dbc7bb46784ddd/fonttools-4.68.0-cp311-cp311-win_arm64.whl", hash = "sha256:04365b897c9ee29a048b6d4db74c75c38b70aa6d1074726fbdd7ea1a23aa8ed2", size = 1649151, upload-time = "2026-10-27T16:28:19.502Z" },
     { url = "https://files.pythonhosted.org/packages/35/74/4ea331ecc65ba05a58b1e4e8ccd604c8a15565f876dfbf93fc2a2ea2e22b/fonttools-4.68.0-py3-none-any.whl", hash = "sha256:d76f8fdcb6936f5e1045a0c9dd721a4bf11112e60d1e243bfa1d39f06a8b3104", size = 1248357, upload-time = "2026-10-27T16:30:24.389Z" },
+]
+
+[[package]]
+name = "imbalanced-learn"
+version = "0.14.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "joblib" },
+    { name = "numpy" },
+    { name = "scikit-learn" },
+    { name = "scipy" },
+    { name = "sklearn-compat" },
+    { name = "threadpoolctl" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ad/35/d12fc1e8e2c2d8862104c4527641fe2d839324c50db0e6340dc73513faba/imbalanced_learn-0.14.2.tar.gz", hash = "sha256:f80ce7eafbcece8686e32571bd12978546c729c3f277215bead61a906ce9afe4", size = 19172446, upload-time = "2026-06-07T21:41:16.638Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/54/760ccac7d8feeea0c191767a6b025d3ca5014084443ff48afb6fb24ef056/imbalanced_learn-0.14.2-py3-none-any.whl", hash = "sha256:f9b81c47231aa1e3a71a1e4b3cc85b42e3b14f85e3a36922f3323c4da23605ef", size = 236073, upload-time = "2026-06-07T21:41:12.384Z" },
+]
+
+[[package]]
+name = "imblearn"
+version = "0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "imbalanced-learn" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/32/0a/f83099534a77757abf27427d339590c83cc68c3386690d4741d6454e185f/imblearn-0.0.tar.gz", hash = "sha256:d8fbb662919c1b16f438ad91a8256220e53bcf6815c9ad5502c518b798de34f2", size = 945, upload-time = "2017-01-19T11:52:35.89Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/81/a7/4179e6ebfd654bd0eac0b9c06125b8b4c96a9d0a8ff9e9507eb2a26d2d7e/imblearn-0.0-py2.py3-none-any.whl", hash = "sha256:d42c2d709d22c00d2b9a91e638d57240a8b79b4014122d92181fcd2549a2f79a", size = 1874, upload-time = "2017-01-19T11:52:37.416Z" },
 ]
 
 [[package]]
@@ -643,6 +672,18 @@ wheels = [
 ]
 
 [[package]]
+name = "sklearn-compat"
+version = "0.1.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "scikit-learn" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/bf/7e/302cb51f8735bad67f5ce088d027a1e299789d8555967c9642656fa36da0/sklearn_compat-0.1.6.tar.gz", hash = "sha256:8fd4731b4f709b66641b8f49c954dafec7e3b60afc48f2cfd298356c713277c6", size = 178018, upload-time = "2026-06-07T19:00:28.409Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b0/20/47a7e947757008be1b77f1c6a6861d26a84ef4b4ea3e6ebf4eff24f24d5d/sklearn_compat-0.1.6-py3-none-any.whl", hash = "sha256:b555db6c09d21eb50ee4a767dc08478a865f33f0e42b3ff8fc33f33c616bd7c1", size = 22868, upload-time = "2026-06-07T19:00:27.242Z" },
+]
+
+[[package]]
 name = "stack-data"
 version = "0.6.3"
 source = { registry = "https://pypi.org/simple" }
@@ -661,6 +702,7 @@ name = "stat-486-final-project"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "imblearn" },
     { name = "ipykernel" },
     { name = "matplotlib" },
     { name = "numpy" },
@@ -671,6 +713,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "imblearn", specifier = ">=0.0" },
     { name = "ipykernel", specifier = ">=6.29,<7" },
     { name = "matplotlib", specifier = ">=3.9,<4" },
     { name = "numpy", specifier = ">=1.26,<3" },
