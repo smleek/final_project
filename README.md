@@ -32,7 +32,7 @@ Where: [`applying_SMOTE.ipynb`](applying_SMOTE.ipynb).
 
 Next: We plan to build our own version of SMOTE that creates new samples in a different way. One idea is to use a weighted average of the class instead of SMOTE’s nearest neighbors. But we plan to come up with better ways.
 
-### Working Investigation - November 12, 2026
+## Working Investigation - November 12, 2026
 
 Please see [`working_investigation.md`](working_investigation.md) for a more detailed overview of our efforts. Code for this checkpoint can be found in [`global_gauss_sample/classifying.ipynb`](global_gauss_sample/classifying.ipynb).
 
