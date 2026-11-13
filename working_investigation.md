@@ -29,7 +29,7 @@ Using the cleaned dataset [`cleaned_animes.csv`](cleaned_animes.csv) from the pa
 | Method  | Macro F1 | Micro F1
 | ------------- |:-------------:|:--------------|
 | Baseline (no oversampling)      | 0.244349     | 0.51008
-| SMOTE      | 0.252019     | 0.252019 | 0.31472
+| SMOTE      | 0.252019      | 0.31472
 | Global Gaussian Oversampling      | 0.297903     | 0.35897
 
 
@@ -37,7 +37,13 @@ The code can be found in [`global_guass_sample/classifying.ipynb`](global_guass_
 
 ## Next Steps
 
+One limitation seen with global gaussian oversampling has been that extremely small classes (with only one or two observed points) are quite oversampled. Because they have so few points, the information we are heavily extrapolating which could lead to extreme overfitting. This is an inherent limitation of unequal class sizes, but that both SMOTE and our adaptation do not effectively deal with.
+
+Our oversampling method has performed marginally better than SMOTE, which is an exciting accomplishment for us. However, both gaussian oversampling and SMOTE performed poorly in micro-f1 scores when compared to the baseline. This may have to do with our setup or even the dataset itself. We will continue to investigate this further. 
+
 While global gaussian oversampling has produced favorable results, we feel that there is a lot of optimization left to be done on this technique, and we hope to find a way to distinguish this technique from the existing literature on global gaussian oversampling. 
 
 The multi-label aspect of the data is also something we are considering further. Because our dataset has multiple labels attached to most inputs, we are considering switching to a dataset that is still a multi-class classification problem but has only one label per input. We’d also like to investigate whether combining global gaussian oversampling with MLSMOTE (Multi-label SMOTE) improves performance. 
+
+
 
