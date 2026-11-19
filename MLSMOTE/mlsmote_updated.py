@@ -19,6 +19,40 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import MultiLabelBinarizer
 
 
+import ast
+
+def load_genres(df):
+    """Convert anime genre strings into lists of genre names."""
+    if 'genres' in df.columns:
+        genre_col = 'genres'
+    elif 'genre_list' in df.columns:
+        genre_col = 'genre_list'
+    else:
+        raise ValueError("Expected 'genres' or 'genre_list' column")
+
+    def parse_genres(value):
+        if isinstance(value, list):
+            return value
+        if pd.isna(value):
+            return []
+
+        value = str(value).strip()
+
+        # Handle serialized Python lists
+        if value.startswith('['):
+            try:
+                parsed = ast.literal_eval(value)
+                if isinstance(parsed, list):
+                    return [str(g).strip() for g in parsed]
+            except (ValueError, SyntaxError):
+                pass
+
+        # Handle pipe-separated genres
+        return [g.strip() for g in value.split('|') if g.strip()]
+
+    return df[genre_col].apply(parse_genres)
+
+
 def imbalance(y):
     counts = np.asarray(y.sum(axis=0), dtype=float)
     ratios = np.full(len(counts), np.nan)
