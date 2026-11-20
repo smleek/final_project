@@ -7,11 +7,7 @@ https://www.sciencedirect.com/science/article/pii/S0950705115002737
 **Route:** A
 **Date:** 11/19/2026
 
-Add a new, dated entry to the root `README.md` of your team's GitHub repository. Link the code, results, and figures or tables that support your summary. Keep earlier entries, commit the update, and submit the repository URL with that commit in Canvas. This file is optional supporting material; preliminary or negative results are welcome.
-
 ## Evidence so far
-
-- **Route A:** Compare the new component with its reference under comparable conditions. What changed, and what does the evidence suggest?
 
 We tried using MLSMOTE to account for the multiple labels found in our dataset. Wording revision: The idea was that MLSMOTE would use the multilabel structure when creating synthetic observations and could improve performance relative to oversampling methods that do not account for multiple labels.
 
@@ -26,8 +22,5 @@ The revised implementation increased macro precision slightly, from 0.397094 to 
 
 
 ## Interpretation and next step
-
-- Describe one informative error, failure, tradeoff, or limitation. How does it affect your conclusion?
-- What did the evidence change in your thinking, and what will you test or revise next?
 
 We are considering returning to the initial global-Gaussian oversampling approach separately from MLSMOTE because MLSMOTE has not improved predictive accuracy in our multilabel experiments. The notebook comparisons suggest that neighbor-based oversampling did not make the smallest minority genres learnable, so we will test whether representation changes, label thresholds, or class weighting have more effect than the oversampling design.
