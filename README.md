@@ -36,4 +36,9 @@ Next: We plan to build our own version of SMOTE that creates new samples in a di
 
 Please see [`working_investigation.md`](working_investigation.md) for a more detailed overview of our efforts. Code for this checkpoint can be found in [`global_gauss_sample/classifying.ipynb`](global_gauss_sample/classifying.ipynb).
 
+## MLSMOTE Investigation - November 19, 2026
+
+We tested standard and paper-aligned MLSMOTE, plus Gaussian MLSMOTE, on our multilabel dataset. MLSMOTE did not improve predictive performance over the baseline.
+
+See [`evidence_and_interpretation.md`](evidence_and_interpretation.md) for results and interpretation. Code is available in [`mlsmote_updated.py`](MLSMOTE/mlsmote_updated.py), [`mlsmote_gaussian_att2.ipynb`](MLSMOTE/mlsmote_gaussian_att2.ipynb), and [`mlsmote_gaussian.ipynb`](MLSMOTE/mlsmote_gaussian.ipynb).
 
